@@ -6,6 +6,7 @@ window.title("CALCULATOR")
 
 #CORE
 expression = ""
+preexpression = ""
 def add(value):
     global expression
     expression += value
@@ -20,16 +21,19 @@ def clear():
 
 def calculate():
     global expression
+    global preexpression
     result = ""
     #if expression is empty then the following happens
     if expression != "":
         try:
-            result =eval(expression)
+            result = eval(expression)
+
         except:
             result = "error"
             expression = ""
     #print in label_result
     label_result.config(text=result)
+    expression = str(result)
 #END OF CORE
 
 
