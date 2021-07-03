@@ -6,7 +6,7 @@ window.title("CALCULATOR")
 
 #CORE
 expression = ""
-preexpression = ""
+
 def add(value):
     global expression
     expression += value
@@ -21,7 +21,7 @@ def clear():
 
 def calculate():
     global expression
-    global preexpression
+
     result = ""
     #if expression is empty then the following happens
     if expression != "":
